@@ -1,11 +1,17 @@
-import {handleResponse, requestOptions, URL} from "../util/serviceHelper";
+import {handleResponse, URL} from "../util/serviceHelper";
 
 const keyService = {
     sendKeyToServer
 };
 
 function sendKeyToServer(key) {
-    return fetch(URL + '/sendKey', requestOptions('POST', key))
+    return fetch(URL + '/sendKey', {
+        method: 'POST',
+        body: JSON.stringify({
+            key: key
+        }),
+        headers: {"Content-Type": "application/json"}
+    })
         .then(handleResponse);
 }
 

@@ -6,8 +6,7 @@ class KeyForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            key: "",
-            shift: 0
+            key: ""
         };
     }
 

@@ -1,10 +1,10 @@
-export function requestOptions(method, payload = {}) {
+export function requestOptions(method, key, payload = {}) {
     const requestOptions = {
         method
     };
     Object.assign(
         requestOptions,
-        method === 'GET' ? undefined : { body: JSON.stringify(payload) }
+        method === 'GET' ? undefined : { body: JSON.stringify({key:  payload}) }
     );
     return requestOptions;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import KeyPage from "./page/KeyPage";
+import KeyPage from "./page/MainPage";
 
 class App extends React.Component {
   render() {
